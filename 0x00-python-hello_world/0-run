@@ -1,1 +1,2 @@
-$PYFILE
+#!/bin/bash
+run $PYFILE
