@@ -12,7 +12,7 @@
 
 listint_t *insert_node(listint_t **head, int number)
 {
-listint_t *node;
+listint_t *node, *current, *future;
 
 if (head == NULL) /*if the list is empty*/
 { return (NULL); }
@@ -29,6 +29,16 @@ if (*head == NULL) /*If the pointer to head is NULL*/
 *head = node;
 return (*head);
 }
+
+current = *head;
+
+if (number <= current->n)/*Placing the number at the start of the list*/
+{
+node->next = current;
+*head = node;
+return(*head);
+}	
+
 
 return (node);
 }
