@@ -1,3 +1,8 @@
 #!/usr/bin/python3
-for i in range(0, 26):
-    print("{:c}".format(i + 97), end="")
+def remove_char_at(str, n):
+    length = len(str)
+    if n > (length - 1) or n < 0:
+        print(str)
+    else:
+        removed = str[0:n] + str[-n:length]
+        print(removed)
