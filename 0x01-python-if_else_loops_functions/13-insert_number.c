@@ -14,7 +14,7 @@ listint_t *insert_node(listint_t **head, int number)
 {
 listint_t *node;
 
-if (head == NULL) /*if head itself is NULL*/
+if (head == NULL) /*if the list is empty*/
 { return (NULL); }
 
 node = malloc(sizeof(listint_t));
@@ -29,5 +29,6 @@ if (*head == NULL) /*If the pointer to head is NULL*/
 *head = node;
 return (*head);
 }
-return (*head);
+
+return (node);
 }
