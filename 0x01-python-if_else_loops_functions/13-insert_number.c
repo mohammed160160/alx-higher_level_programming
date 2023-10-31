@@ -17,7 +17,7 @@ listint_t *node;
 if (head == NULL) /*if head itself is NULL*/
 { return (NULL); }
 
-node = malloc(sizeof(listint_t))
+node = malloc(sizeof(listint_t));
 if (node == NULL)
 { return (NULL); }
 
@@ -29,7 +29,5 @@ if (*head == NULL) /*If the pointer to head is NULL*/
 *head = node;
 return (*head);
 }
-
-
-
+return (*head);
 }
