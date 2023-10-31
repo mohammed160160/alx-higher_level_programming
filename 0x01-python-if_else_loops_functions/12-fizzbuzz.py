@@ -1,4 +1,11 @@
 #!/usr/bin/python3
-import random
-number = random.randint(-10000, 10000)
-# YOUR CODE HERE
+def fizzbuzz():
+    for i in range(0, 100)
+        if i%3 != 0 and i%5 != 0:
+            print(i, end='')
+        else:
+            if i%3 == 0:
+                print("Fizz", end='')
+            if i%5 == 0:
+                print("Buzz", end='')
+        print(end=' ')
