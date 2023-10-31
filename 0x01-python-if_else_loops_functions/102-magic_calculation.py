@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-for i in range(0, 26):
-    print("{:c}".format(i + 97), end="")
+def magic_calculation(a, b, c):
+    if(a < b):
+        return(c)
+    elif(c > b):
+        return(a + b)
+    return(a * b - c)
