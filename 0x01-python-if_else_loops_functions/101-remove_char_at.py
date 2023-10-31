@@ -4,5 +4,5 @@ def remove_char_at(str, n):
     if n > (length - 1) or n < 0:
         print(str)
     else:
-        removed = str[0:n] + str[-n:length]
+        removed = str[:n] + str[-n:]
         print(removed)
