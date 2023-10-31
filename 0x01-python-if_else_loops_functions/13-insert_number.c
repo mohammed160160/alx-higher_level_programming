@@ -12,33 +12,43 @@
 
 listint_t *insert_node(listint_t **head, int number)
 {
-listint_t *node, *current;
+listint_t *node, *current, *future;
 
 if (head == NULL) /*if the list is empty*/
 { return (NULL); }
-
-node = malloc(sizeof(listint_t));
+node = malloc(sizeof(listint_t)); /*making the node*/
 if (node == NULL)
 { return (NULL); }
-
-node->n = number;
+node->n = number;  /*The node's starting details*/
 node->next = NULL;
-
 if (*head == NULL) /*If the pointer to head is NULL*/
-{
-*head = node;
-return (*head);
-}
+{ *head = node;
+return (*head); }
 
 current = *head;
-
 if (number <= current->n)/*Placing the number at the start of the list*/
 {
 node->next = current;
 *head = node;
-return(*head);
-}	
+return (*head);
+}
 
-
+future = current->next;
+while (current != NULL)
+{
+	if (future == NULL)
+	{ current->next = node;
+	break; }
+	if (future->n == number)
+	{ current->next = node;
+	node->next = future;
+	break; }
+	if (future->n > number && current->n < number)
+	{ current->next = node;
+	node->next = future;
+	break; }
+	current = current->next;
+	future = future->next;
+}
 return (node);
 }
