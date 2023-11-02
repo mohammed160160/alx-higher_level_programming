@@ -2,7 +2,9 @@
 import sys
 if __name__ == "__main__":
     count = len(sys.argv) - 1
-    print("{:d} arguments".format(count),end="")
+    print("{:d} argument".format(count), end="")
+    if count != 1:
+        print("s", end="")
     print(end=":\n" if count > 0 else ".\n")
     for i in range(0, count):
         j = i + 1
