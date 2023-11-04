@@ -24,8 +24,8 @@ while (end->next != NULL)
 length++;
 end = end->next;
 }
-length++;
-for (checker = 0; checker >= (length / 2); checker++)
+
+for (checker = 0; checker < (length / 2); checker++)
 {
 if (start->n != end->n)
 {
