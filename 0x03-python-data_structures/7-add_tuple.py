@@ -16,7 +16,7 @@ def add_tuple(tuple_a=(), tuple_b=()):
         firstb = 0
     else:
         firstb = tuple_b[0]
-        
+
     if (blength == 0 or blength == 1):
         secondb = 0
     else:
