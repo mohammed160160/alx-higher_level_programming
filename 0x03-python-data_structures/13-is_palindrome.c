@@ -16,8 +16,8 @@ listint_t *start, *end, *newend;
 if (head == NULL) /*if the list is empty*/
 { return (1); }
 
-start = *head
-end = *head
+start = *head;
+end = *head;
 
 while (end->next != NULL)
 {
