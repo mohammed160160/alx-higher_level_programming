@@ -27,6 +27,8 @@ lengthfinder = lengthfinder->next;
 length++;
 }
 
+length++;
+
 int array[length];
 
 for (e = 0; e < length; e++)
