@@ -14,7 +14,7 @@ int e = 0, dif = 0, length = 0;
 int *array;
 listint_t *start, *lengthfinder;
 
-if (head == NULL || *head == NULL || *head->next == NULL)
+if (head == NULL || *head == NULL)
 {
 	return (1);
 }
@@ -27,6 +27,9 @@ while (lengthfinder != NULL)
 length++;
 lengthfinder = lengthfinder->next;
 }
+
+if (length == 1)
+{ return (1); }
 
 array = malloc(length * sizeof(int));
 
