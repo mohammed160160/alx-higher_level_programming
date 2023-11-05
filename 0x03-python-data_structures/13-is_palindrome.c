@@ -28,9 +28,6 @@ length++;
 lengthfinder = lengthfinder->next;
 }
 
-if (length == 1)
-{ return (1); }
-
 array = malloc(length * sizeof(int));
 
 for (e = 0; e < length; e++)
