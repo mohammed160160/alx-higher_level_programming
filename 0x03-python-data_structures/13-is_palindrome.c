@@ -13,7 +13,7 @@ int is_palindrome(listint_t **head)
 int length = 0, checker = 0;
 listint_t *start, *end, *newend;
 
-if (head == NULL) /*if the list is empty*/
+if (head == NULL || *head == NULL) /*if the list is empty*/
 { return (1); }
 
 start = *head;
