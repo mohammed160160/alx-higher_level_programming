@@ -11,6 +11,7 @@
 int is_palindrome(listint_t **head)
 {
 int e = 0, dif = 0, length = 0;
+int *array;
 listint_t *start, *lengthfinder;
 
 if (head == NULL || *head == NULL) /*if the list is empty*/
@@ -26,10 +27,9 @@ while (lengthfinder->next != NULL)
 lengthfinder = lengthfinder->next;
 length++;
 }
-
 length++;
 
-int array[length];
+array = malloc(length * sizeof(int));
 
 for (e = 0; e < length; e++)
 {
@@ -41,9 +41,11 @@ for (dif = 0; dif < (length / 2); dif++)
 {
 	if (array[dif] != array[length - (dif + 1)])
 	{
+	free(array);
 	return (0);
 	}
 }
 
+free(array);
 return (1);
 }
