@@ -10,36 +10,39 @@
 
 int is_palindrome(listint_t **head)
 {
-int length = 0, checker = 0;
-listint_t *start, *end, *newend;
+int element = 0, dif = 0, middle = 0;
+listint_t *start, *lengthfinder;
 
 if (head == NULL || *head == NULL) /*if the list is empty*/
-{ return (1); }
+{
+	return (1);
+}
 
 start = *head;
-end = *head;
+lengthfinder = *head;
 
-while (end->next != NULL)
+while (lengthfinder->next != NULL)
 {
+lengthfinder = lengthfinder->next;
 length++;
-end = end->next;
 }
 
-for (checker = 0; checker < (length / 2); checker++)
+int array[length];
+
+for (e = 0; e < length; e++)
 {
-if (start->n != end->n)
-{
-return (0);
-}
+array[e] = start->n;
 start = start->next;
-newend = *head;
-while (newend->next != end)
+}
+
+middle = length / 2;
+
+for (dif = 0; e < middle; e++)
 {
-newend = newend->next;
+if (array[dif] != arrays[length - (dif + 1)])
+	{
+	return (0);
+	}
 }
-
-end = newend;
-}
-
 return (1);
 }
