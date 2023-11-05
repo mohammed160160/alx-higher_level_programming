@@ -1,4 +1,4 @@
-#include <python.h>
+#include <Python.h>
 
 /**
  * print_python_list_info - print python inputs in c
@@ -19,6 +19,6 @@ void print_python_list_info(PyObject *p)
 	printf("Element %d: ", x);
 
 		obj = PyList_GetItem(p, i);
-		printf("%s\n", PyTYPE(obj)->tp_name);
+		printf("%s\n", Py_TYPE(obj)->tp_name);
 	}
 }
