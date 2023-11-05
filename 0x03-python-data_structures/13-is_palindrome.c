@@ -14,7 +14,7 @@ int e = 0, dif = 0, length = 0;
 int *array;
 listint_t *start, *lengthfinder;
 
-if (head == NULL || *head == NULL) /*if the list is empty*/
+if (head == NULL || *head == NULL || head->next == NULL)
 {
 	return (1);
 }
