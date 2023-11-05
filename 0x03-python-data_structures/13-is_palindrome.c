@@ -37,7 +37,7 @@ start = start->next;
 
 middle = length / 2;
 
-for (dif = 0; e < middle; e++)
+for (dif = 0; dif < middle; dif++)
 {
 if (array[dif] != arrays[length - (dif + 1)])
 	{
