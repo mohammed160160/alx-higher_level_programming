@@ -22,12 +22,11 @@ if (head == NULL || *head == NULL) /*if the list is empty*/
 start = *head;
 lengthfinder = *head;
 
-while (lengthfinder->next != NULL)
+while (lengthfinder != NULL)
 {
+length++;
 lengthfinder = lengthfinder->next;
-length++;
 }
-length++;
 
 array = malloc(length * sizeof(int));
 
