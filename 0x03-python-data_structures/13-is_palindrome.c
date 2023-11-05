@@ -10,7 +10,7 @@
 
 int is_palindrome(listint_t **head)
 {
-int e = 0, dif = 0, middle = 0, length = 0;
+int e = 0, dif = 0, length = 0;
 listint_t *start, *lengthfinder;
 
 if (head == NULL || *head == NULL) /*if the list is empty*/
@@ -37,14 +37,13 @@ array[e] = start->n;
 start = start->next;
 }
 
-middle = length / 2;
-
-for (dif = 0; dif < middle; dif++)
+for (dif = 0; dif < (length / 2); dif++)
 {
-if (array[dif] != array[length - (dif + 1)])
+	if (array[dif] != array[length - (dif + 1)])
 	{
 	return (0);
 	}
 }
+
 return (1);
 }
