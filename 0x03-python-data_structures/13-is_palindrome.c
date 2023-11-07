@@ -11,7 +11,6 @@
 int is_palindrome(listint_t **head)
 {
 int e = 0, dif = 0, length = 0;
-int *array;
 listint_t *start, *lengthfinder;
 
 if (head == NULL || *head == NULL)
@@ -28,7 +27,9 @@ length++;
 lengthfinder = lengthfinder->next;
 }
 
-array = malloc(length * sizeof(int));
+int *array;
+
+array = malloc(length *sizeof(int));
 
 for (e = 0; e < length; e++)
 {
