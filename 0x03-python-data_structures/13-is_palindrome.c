@@ -29,7 +29,7 @@ lengthfinder = lengthfinder->next;
 
 int *array;
 
-array = malloc(length *sizeof(int));
+array = malloc(length * sizeof(int));
 
 for (e = 0; e < length; e++)
 {
