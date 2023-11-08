@@ -1,5 +1,8 @@
 #include <Python.h>
 
+void print_python_list(PyObject *p);
+void print_python_bytes(PyObject *p);
+
 /**
  * print_python_list - print python inputs in c
  * @p: OyObject list
@@ -20,7 +23,7 @@ void print_python_list(PyObject *p)
 
 	for (x = 0; x < size; x++)
 	{
-		type = list->ob_item[x]->ob_type->ob_name;
+		type = list->ob_item[x]->ob_type->tp_name;
 		printf("Element %d: %s\n", x, type);
 		if (strcmp(type, "bytes") == 0)
 		{ print_python_bytes(list->ob_item[x]); }
