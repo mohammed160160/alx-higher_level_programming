@@ -3,7 +3,7 @@ def square_matrix_simple(matrix=[]):
     listnum = len(matrix)
     listelement = len(matrix[0])
 
-    mat = [[0] * listelement] * listnum
+    mat = [[None] * listelement] * listnum
 
     for i in range(0, listnum):
         for j in range(0, listelement):
