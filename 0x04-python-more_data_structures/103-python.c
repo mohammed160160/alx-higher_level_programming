@@ -4,7 +4,7 @@
  * print_python_list - print python inputs in c
  * @p: OyObject list
  */
-void print_python_list(PyObject *p);
+void print_python_list(PyObject *p)
 {
 	int size, space, x;
 	const char *type;
