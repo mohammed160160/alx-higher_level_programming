@@ -7,4 +7,5 @@ class Square:
 
     def __init__(self, size):
         """"A construction with private size as argument."""
-        self.__size = name
+
+        self.__size = size
