@@ -1,7 +1,9 @@
 #!/usr/bin/python3
-class Square:
-    """This is a square"""
+""""Square module"""
 
+
+class Square:
+    """This is a square with size"""
 
     def __init__(self, size=0):
         """"A construction with private size as argument and raising error
