@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
 """"Square module"""
 
 
@@ -30,7 +29,7 @@ class Square:
 
     def my_print(self):
         """A construction used to print a square with length of size"""
-        for i in range (0, self.__size):
+        for i in range(0, self.__size):
             for j in range(0, self.__size):
                 print("#", end='')
             print()
