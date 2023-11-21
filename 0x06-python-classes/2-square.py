@@ -2,6 +2,7 @@
 class Square:
     """This is a square"""
 
+
     def __init__(self, size=0):
         """"A construction with private size as argument and raising error
         in 2 situations first if the type of size isnt an integer and second
