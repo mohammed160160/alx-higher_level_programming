@@ -1,0 +1,18 @@
+import module:
+	>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+Testing normal:
+	>>> say_my_name("Moha","Salah")
+	My name is Moha Salah
+
+Testing without a lastname:
+        >>> say_my_name("Moha")
+        My name is Moha
+
+Testing with a empty first name:
+        >>> say_my_name("")
+        My name is Moha
+
+Testing with nothing:
+        >>> say_my_name()
+	My name is Moha
