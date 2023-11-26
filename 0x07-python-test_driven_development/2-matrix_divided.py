@@ -1,10 +1,14 @@
 #!/usr/bin/python3
+"matrix_divided module"
+
+
 def matrix_divided(matrix, div):
-    if (not(isinstance(div, int)) and not(isinstance(div, float))):
+    """This takes a list of integers and integer/float"""
+    if not isinstance(div, (int, float)):
         raise TypeError('div must be a number')
     if div == 0:
         raise TypeError('division by zero')
-    
+
     value = 0
     for i in range(0, len(matrix)):
         if ((i != 0) and (len(matrix[i]) != value)):
