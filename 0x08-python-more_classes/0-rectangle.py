@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Square Module"""
+"""Rectangle Module"""
 
 
-class Square():
-    """This is a square"""
+class Rectangle():
+    """This is a Rectangle"""
     pass
