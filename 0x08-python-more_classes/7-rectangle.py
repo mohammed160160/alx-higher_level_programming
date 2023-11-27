@@ -56,16 +56,15 @@ class Rectangle():
 
     def __str__(self):
         """Generates a rectangle as a string"""
-        string = ""
         if (self.__width == 0 or self.__height == 0):
-            return (string)
+            return ("")
         listing = []
         for i in range(0, self.__height):
             for j in range(0, self.__width):
-                listing.append(str(Rectangle.print_symbol))
+                listing.append(str(self.print_symbol))
             if i != (self.__height - 1):
                 listing.append('\n')
-        return (string.join(listing))
+        return (''.join(listing))
 
     def __repr__(self):
         """Generates an actual representation of a string"""
