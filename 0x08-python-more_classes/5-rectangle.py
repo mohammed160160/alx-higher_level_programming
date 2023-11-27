@@ -67,5 +67,5 @@ class Rectangle():
         return (string)
 
     def __del__(self):
-        """Deletes an object with a message""""
+        """Deletes an object with a message"""
         print("Bye rectangle...")
