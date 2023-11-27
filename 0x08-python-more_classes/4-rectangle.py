@@ -53,14 +53,14 @@ class Rectangle():
         """Generates a rectangle as a string"""
         string = ""
         if (self.__width == 0 or self.__height == 0):
-            return(string)
+            return (string)
         for i in range(0, self.__height):
             for j in range(0, self.__width):
                 string += '#'
             if i != (self.__height - 1):
                 string += '\n'
         return (string)
-    
+
     def __repr__(self):
         """Generates an actual representation of a string"""
         string = 'Rectangle({}, {})'.format(self.__width, self.__height)
