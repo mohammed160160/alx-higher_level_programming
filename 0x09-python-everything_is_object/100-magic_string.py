@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-repeat = 1
 def magic_string():
+    magic_string.n = 
     return("BestSchool" * repeat)
