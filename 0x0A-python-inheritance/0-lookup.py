@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""Lookup module"""
 
 
 def lookup(obj):
-    return(dir(obj))
+    """To return the atrributes of obj"""
+    return (dir(obj))
