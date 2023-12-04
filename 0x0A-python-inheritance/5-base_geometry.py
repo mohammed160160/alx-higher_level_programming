@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""BaseGeometry Module"""
 
 
-class Rectangle():
-    """This is a Rectangle"""
+class BaseGeometry():
+    """This is a BaseGeometry"""
     pass
