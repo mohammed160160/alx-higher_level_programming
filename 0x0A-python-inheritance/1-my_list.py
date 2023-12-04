@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-"""Rectangle Module"""
+"""My list Module"""
 
 
-class Rectangle():
-    """This is a Rectangle"""
-    pass
+class MyList(list)
+    """This is a class to print a list sorted"""
+
+    def print_sorted(self):
+        """prints a list of int in order from big to small"""
+        print(sorted(self))
