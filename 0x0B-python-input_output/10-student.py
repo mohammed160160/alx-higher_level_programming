@@ -17,5 +17,5 @@ class Student():
         but if attrs is a list of string return the attributes in list"""
         if type(attrs) is list:
             if ((type(element) is str) for element in attrs):
-                return {x: getattr(self, x) for x in attrs if getattr(self, x)}
+                return {x: getattr(self, x) for x in attrs if hasattr(self, x)}
         return (self.__dict__)
