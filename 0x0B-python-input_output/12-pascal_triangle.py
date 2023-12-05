@@ -10,7 +10,7 @@ def pascal_triangle(n):
         return (triangle)
 
     linenum = 0
-    triangle.append([1])    
+    triangle.append([1])
     while len(triangle) != n:
         line = [1]
         lastline = triangle[-1]
