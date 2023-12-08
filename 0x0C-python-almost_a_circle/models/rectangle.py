@@ -75,9 +75,14 @@ class Rectangle(Base):
     def display(self):
         """Returns the shape of the rectangle class"""
         rect = ""
-        for x in range(self.__height):
-            for y in range(self.__width):
+        for y in range(self.__y):
+            rect += "\n"
+        for i in range(self.__height):
+            x = 0
+            for x in range(self.__x):
+                rect += " "
+            for j in range(self.__width):
                 rect += "#"
-            if x is not (self.__height - 1):
+            if i is not (self.__height - 1):
                 rect += "\n"
         print(rect)
