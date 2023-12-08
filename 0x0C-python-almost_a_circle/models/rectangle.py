@@ -72,8 +72,17 @@ class Rectangle(Base):
         """Returns the area of the rectangle class"""
         return (self.__width * self.__height)
 
+    def __str__(self):
+        """Returns a representation of the rectangle in text"""
+        Rect = ""
+        Rect += "[Rectangle] "
+        Rect += "({}) ".format(self.id)
+        Rect += "{}/{} - ".format(self.__x, self.__y)
+        Rect += "{}/{}".format(self.__width, self.__height)
+        return(Rect)
+
     def display(self):
-        """Returns the shape of the rectangle class"""
+        """Returns a representation of the rectangle in #"""
         rect = ""
         for y in range(self.__y):
             rect += "\n"
