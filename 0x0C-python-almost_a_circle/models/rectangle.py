@@ -67,3 +67,17 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(name))
         elif value <= 0:
             raise ValueError("{} must be > 0".format(name))
+
+    def area(self):
+        """Returns the area of the rectangle class"""
+        return (self.__width * self.__height)
+
+    def display(self):
+        """Returns the shape of the rectangle class"""
+        rect = ""
+        for x in range(self.__height):
+            for y in range(self.__width):
+                rect += "#"
+            if x is not (self.__height - 1):
+                rect += "\n"
+        print(rect)
