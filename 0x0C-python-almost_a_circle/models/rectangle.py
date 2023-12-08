@@ -20,7 +20,8 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
-        """To set the value of the heights"""
+        """To check and set the value of the height"""
+        self.validationcheck("height", value)
         self.__height = value
 
     @property
@@ -30,25 +31,39 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """To set the value of the heights"""
+        """To check and set the value of the width"""
+        self.validationcheck("height", value)
         self.__width = value
 
     @property
     def x(self):
-        """Sets the height as a private attribute"""
+        """Sets the x as a private attribute"""
         return (self.__x)
 
     @x.setter
     def x(self, value):
-        """To set the value of the heights"""
+        """To check and set the value of x"""
+        self.validationcheck("x", value)
         self.__x = value
 
     @property
     def y(self):
-        """Sets the height as a private attribute"""
+        """Sets the y as a private attribute"""
         return (self.__y)
 
     @height.setter
     def y(self, value):
-        """To set the value of the heights"""
+        """To set and check the value of y"""
+        self.validationcheck("y", value)
         self.__y = value
+
+
+    @staticmethod
+    def validationcheck(name, value):
+        if type(value) is not int:
+            raise TypeError("{} must be an integer".format(name))
+        if len(name) == 1:
+            if value < 0:
+                raise ValueError("{} must be >= 0".format(name))
+        elif value <= 0:
+            raise ValueError("{} must be > 0".format(name))
