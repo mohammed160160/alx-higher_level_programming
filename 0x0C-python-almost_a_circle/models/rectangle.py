@@ -95,3 +95,18 @@ class Rectangle(Base):
             if i is not (self.__height - 1):
                 rect += "\n"
         print(rect)
+
+    def update(self, *args, **kwargs):
+        """Updates a values of a rectangle class using args and kawargs"""
+        if len(args) is 0:
+            for string, value in kwargs.items():
+                self.__setattr__(string, value)
+        else:
+            try:
+                self.id = args[0]
+                self.width = args[1]
+                self.height = args[2]
+                self.x = args[3]
+                self.y = args[4]
+            except:
+                pass
