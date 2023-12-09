@@ -33,3 +33,6 @@ class Base():
             else:
                 dic_list = [x.to_dictionary() for x in list_objs]
                 f.write(Base.to_json_string(dic_list))
+
+    @staticmethod
+    def from_json_string(json_string):
