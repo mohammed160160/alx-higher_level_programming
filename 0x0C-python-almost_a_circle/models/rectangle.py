@@ -62,7 +62,7 @@ class Rectangle(Base):
     def validationcheck(name, value):
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
-        if (name == "x" or name == "y"):
+        if name in ("x", "y"):
             if value < 0:
                 raise ValueError("{} must be >= 0".format(name))
         elif value <= 0:
