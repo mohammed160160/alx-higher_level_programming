@@ -25,5 +25,11 @@ class Base():
 
     @staticmethod
     def save_to_file(cls, list_objs):
-        """"Saves the list objects into a JSON file"""
-        filename = cls.__name__ + .json
+        """Saves the list objects into a JSON file"""
+        filename = cls.__name__ + ".json"
+        with open(filename, 'w', encoding='utf-8') as f:
+            if list_objs is None:
+                f.write("[]")
+            else:
+                dic_list = [x.to_dictionary() for x in list_objs]
+                f.write(Base.to_json_string(dic_list))
