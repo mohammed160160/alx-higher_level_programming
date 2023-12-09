@@ -57,9 +57,9 @@ class Rectangle(Base):
         self.validationcheck("y", value)
         self.__y = value
 
-
     @staticmethod
     def validationcheck(name, value):
+        """Checks the validation of each variable in the class"""
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
         if name in ("x", "y"):
@@ -109,3 +109,7 @@ class Rectangle(Base):
                 self.y = args[4]
             except:
                 pass
+
+    def to_dictionary(self):
+        """returns the dictionary representation of a Rectangle"""
+
