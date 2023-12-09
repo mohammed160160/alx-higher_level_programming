@@ -15,3 +15,14 @@ class Square(Rectangle):
         sq += "[Square] ({}) ".format(self.id)
         sq += "{}/{} - {}".format(self.x, self.y, self.width)
         return (sq)
+
+    @property
+    def size(self):
+        """Sets the width as a private attribute"""
+        return (self.width)
+
+    @size.setter
+    def size(self, value):
+        """To check and set the value of the width"""
+        self.width = value
+        self.height = value
