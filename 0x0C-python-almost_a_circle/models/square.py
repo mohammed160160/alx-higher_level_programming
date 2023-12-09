@@ -26,3 +26,17 @@ class Square(Rectangle):
         """To check and set the value of the width"""
         self.width = value
         self.height = value
+
+    def update(self, *args, **kwargs):
+        """Updates a values of a rectangle class using args and kawargs"""
+        if len(args) == 0:
+            for string, value in kwargs.items():
+                self.__setattr__(string, value)
+        else:
+            try:
+                self.id = args[0]
+                self.size = args[1]
+                self.x = args[2]
+                self.y = args[3]
+            except:
+                pass
