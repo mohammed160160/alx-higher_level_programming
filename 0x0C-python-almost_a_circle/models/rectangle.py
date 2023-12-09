@@ -97,7 +97,7 @@ class Rectangle(Base):
 
     def update(self, *args, **kwargs):
         """Updates a values of a rectangle class using args and kawargs"""
-        if len(args) is 0:
+        if len(args) == 0:
             for string, value in kwargs.items():
                 self.__setattr__(string, value)
         else:
@@ -112,4 +112,7 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
-
+        dic = {'x': getattr(self, "x"), 'y': getattr(self, "y"),
+        'id': getattr(self, "id"), 'height': getattr(self, "height"),
+        'width': getattr(self, "width")}
+        return (dic)

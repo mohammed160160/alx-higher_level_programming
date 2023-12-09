@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """"The base of the class system"""
+import json
 
 
 class Base():
@@ -14,3 +15,15 @@ class Base():
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+    
+    @staticmethod
+    def to_json_string(list_dictionaries):
+        """"Prints the JSON representation of the dirtionaries list"""
+        if (list_dictionaries is None) or (list_dictionaries == []):
+            return ([])
+        return(json.dumps(list_dictionaries))
+
+    @staticmethod
+    def save_to_file(cls, list_objs):
+        """"Saves the list objects into a JSON file"""
+        filename = cls.__name__ + .json
