@@ -32,7 +32,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, value):
         """To check and set the value of the width"""
-        self.validationcheck("height", value)
+        self.validationcheck("width", value)
         self.__width = value
 
     @property
@@ -62,7 +62,7 @@ class Rectangle(Base):
     def validationcheck(name, value):
         if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
-        if len(name) == 1:
+        if (name == "x" or name == "y"):
             if value < 0:
                 raise ValueError("{} must be >= 0".format(name))
         elif value <= 0:
@@ -75,8 +75,7 @@ class Rectangle(Base):
     def __str__(self):
         """Returns a representation of the rectangle in text"""
         Rect = ""
-        Rect += "[Rectangle] "
-        Rect += "({}) ".format(self.id)
+        Rect += "[Rectangle] ({})".format(self.id)
         Rect += "{}/{} - ".format(self.__x, self.__y)
         Rect += "{}/{}".format(self.__width, self.__height)
         return(Rect)
