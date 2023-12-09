@@ -51,7 +51,7 @@ class Rectangle(Base):
         """Sets the y as a private attribute"""
         return (self.__y)
 
-    @height.setter
+    @y.setter
     def y(self, value):
         """To set and check the value of y"""
         self.validationcheck("y", value)
