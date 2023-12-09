@@ -22,3 +22,9 @@ if __name__ == "__main__":
     print(s3)
     print(s3.area())
     s3.display()
+
+
+    s4 = Square(10, 1, 3, 20)
+    print(s4)
+    print(s4.area())
+    s4.display()
