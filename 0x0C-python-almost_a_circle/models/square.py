@@ -2,6 +2,7 @@
 """"The base of the class system"""
 from models.rectangle import Rectangle
 
+
 class Square(Rectangle):
     """The Square class for this project"""
 
@@ -33,16 +34,22 @@ class Square(Rectangle):
             for string, value in kwargs.items():
                 self.__setattr__(string, value)
         else:
-            try:
-                self.id = args[0]
-                self.size = args[1]
-                self.x = args[2]
-                self.y = args[3]
-            except:
-                pass
-    
+            for a, b in enumerate(args):
+                if a == 0:
+                    self.id = b
+                if a == 1:
+                    self.size = b
+                if a == 2:
+                    self.x = b
+                if a == 3:
+                    self.y = b
+
     def to_dictionary(self):
         """returns the dictionary representation of a Square"""
-        dic = {'id': getattr(self, "id"), 'size': getattr(self, "width"),
-        'x': getattr(self, "x"), 'y': getattr(self, "y")}
+        dic = {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'size': self.width
+            }
         return (dic)
