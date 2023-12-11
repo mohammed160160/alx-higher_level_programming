@@ -101,18 +101,25 @@ class Rectangle(Base):
             for string, value in kwargs.items():
                 self.__setattr__(string, value)
         else:
-            try:
-                self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
-                self.x = args[3]
-                self.y = args[4]
-            except:
-                pass
+            for a, b in enumerate(args):
+                if a == 0:
+                    self.id = b
+                if a == 1:
+                    self.width = b
+                if a == 2:
+                    self.height = b
+                if a == 3:
+                    self.x = b
+                if a == 4:
+                    self.y = b
 
     def to_dictionary(self):
         """returns the dictionary representation of a Rectangle"""
-        dic = {'x': getattr(self, "x"), 'y': getattr(self, "y"),
-        'id': getattr(self, "id"), 'height': getattr(self, "height"),
-        'width': getattr(self, "width")}
+        dic = {
+            'x': self.x,
+            'y': self.y,
+            'id': self.id,
+            'height': self.height,
+            'width': self.width
+            }
         return (dic)
