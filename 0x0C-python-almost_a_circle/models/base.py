@@ -34,3 +34,10 @@ class Base():
 
         with open(filename, 'w') as f:
             f.write(cls.to_json_string(content))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the class representation from a json_string"""
+        if (json_string is None) or (len(json_string) == 0):
+            return ([])
+        return (json.loads(json_string))
