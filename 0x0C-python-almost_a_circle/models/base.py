@@ -23,7 +23,7 @@ class Base():
             return (json.dumps([]))
         return (json.dumps(list_dictionaries))
 
-    @staticmethod
+    @classmethod
     def save_to_file(cls, list_objs):
         """Saves the list objects into a JSON file"""
         filename = cls.__name__ + ".json"
@@ -42,9 +42,9 @@ class Base():
             return ([])
         return (json.loads(json_string))
 
-    @staticmethod
+    @classmethod
     def create(cls, **dictionary):
-        """Returns an instance with all attributes set 
+        """Returns an instance with all attributes set
         using a dictionary"""
         if cls.__name__ == 'Rectangle':
             copy = cls(1, 1)
@@ -52,3 +52,17 @@ class Base():
             copy = cls(1)
         copy.update(**dictionary)
         return (copy)
+
+    @classmethod
+    def load_from_file(cls):
+        """returns a list of instances"""
+        filename = cls.__name__ + ".json"
+        content = []
+        try:
+            with open(filename, 'r') as f:
+                content = cls.from_json_string(f.read())
+            for i, j in enumerate(content):
+                content[i] = cls.create(**lst[i])
+        except FileNotFoundError:
+            pass
+        return (content)
