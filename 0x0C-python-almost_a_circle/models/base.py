@@ -41,3 +41,14 @@ class Base():
         if (json_string is None) or (len(json_string) == 0):
             return ([])
         return (json.loads(json_string))
+
+    @staticmethod
+    def create(cls, **dictionary):
+        """Returns an instance with all attributes set 
+        using a dictionary"""
+        if cls.__name__ == 'Rectangle':
+            copy = cls(1, 1)
+        elif cls.__name__ == 'Square':
+            copy = cls(1)
+        copy.update(**dictionary)
+        return (copy)
