@@ -78,7 +78,7 @@ class Rectangle(Base):
         Rect += "[Rectangle] ({})".format(self.id)
         Rect += "{}/{} - ".format(self.__x, self.__y)
         Rect += "{}/{}".format(self.__width, self.__height)
-        return(Rect)
+        return (Rect)
 
     def display(self):
         """Returns a representation of the rectangle in #"""
