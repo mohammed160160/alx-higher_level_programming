@@ -3,9 +3,7 @@
 import MySQLdb
 import sys
 
-def list_states():
-    """List all the states in a MySQL database"""
-
+if __name__ == "__main__":
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -23,6 +21,3 @@ def list_states():
 
     cursor.close()
     db.close()
-
-if __name__ == "__main__":
-    list_states()
