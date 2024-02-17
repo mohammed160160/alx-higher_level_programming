@@ -23,7 +23,5 @@ if __name__ == "__main__":
     list_info = [data[0] for data in info]
 
     print(", ".join(list_info))
-
-
     cursor.close()
     db.close()
