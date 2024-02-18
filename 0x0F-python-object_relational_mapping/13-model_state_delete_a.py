@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-#!/usr/bin/python3
-""" Changes an Id name of a state in database using sqlalchemy"""
+""" Deletes any State that has 'a' in database using sqlalchemy"""
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
