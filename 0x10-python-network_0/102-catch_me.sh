@@ -1,3 +1,3 @@
 #!/bin/bash
-#send DELETE request to URL as the first argument, display the body of response
-curl -s "$1" -X DELETE
+#request to cause the server to respond with "You got me!",in body of response.
+curl -sL 0:5000/catch_me -X PUT "You got me!"
