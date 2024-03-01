@@ -6,11 +6,12 @@ import sys
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
 
-    try:
-        VarQ = {'q': sys.argv[1]}
-    except IndexError:
-        print("No result")
+    if len(argv) > 1:
+        Argument = sys.argv[1]
+    else:
+        Argument = ""
 
+    VarQ = {'q': Argument}
     REQUEST = requests.post(url, VarQ)
 
     try:
