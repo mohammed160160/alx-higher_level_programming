@@ -1,4 +1,8 @@
 #!/usr/bin/python3
-import urllib
-'This is a description'\n\n
-if __name__ == __main__:
+"""takes and requests from a URL displaying value of X-Reader"""
+import requests
+import sys
+
+if __name__ == "__main__":
+    REQUEST = requests.get(sys.argv[1])
+    print(REQUEST.headers.get('X-Request-Id'))
