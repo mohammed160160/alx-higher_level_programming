@@ -4,14 +4,11 @@ import requests
 import sys
 
 if __name__ == "__main__":
-    url = "http://0.0.0.0:5000/search_user"
-    REQUEST = requests.get
+    URL = "https://api.github.com/user"
+    Checking=(sys.argv[1], sys.argv[2])
+    REQUEST = requests.get(URL, auth=Checking)
 
-    try:
-        JASON = REQUEST.json()
-        if JASON:
-            print("[{}] {}".format(JASON['id'], JASON['name']))
-        else:
-            print("No result")
-    except ValueError:
-        print("Not a valid JSON")
+    if REQUEST.status_code == 200:
+        print(REQUEST.json().get('id'))
+    else:
+        print(None)
