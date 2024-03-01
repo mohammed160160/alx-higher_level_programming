@@ -5,12 +5,7 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    if len(argv) < 1:
-        Q = ""
-    else:
-        Q = sys.argv[1]
-
-    VarQ = {'q': Q}
+    VarQ = {'q': sys.argv[1]}
     REQUEST = requests.post(url, VarQ)
 
     try:
