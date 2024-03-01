@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import urllib.request
-"""  pulls info from https://alx-intranet.hbtn.io/status  """
 
+"""pulls info from https://alx-intranet.hbtn.io/status"""
 
 if __name__ == "__main__":
     with urllib.request.urlopen('https://alx-intranet.hbtn.io/status') as I:
