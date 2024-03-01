@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 import urllib.request
 import sys
-"""This is a description"""
+"""takes and requests from a URL displaying value of X-Reader"""
 
 
 if __name__ == "__main__":
