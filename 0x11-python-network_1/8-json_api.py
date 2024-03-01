@@ -5,9 +5,14 @@ import sys
 
 if __name__ == "__main__":
     url = "http://0.0.0.0:5000/search_user"
-    VarQ = {'q': sys.argv[1]}
+    if len(argv) < 1:
+        Q = ""
+    else:
+        Q = sys.argv[1]
+
+    VarQ = {'q': Q}
     REQUEST = requests.post(url, VarQ)
-    
+
     try:
         JASON = REQUEST.json()
         if JASON:
