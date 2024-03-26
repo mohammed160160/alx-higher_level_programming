@@ -10,8 +10,8 @@ request.get(URL, (error, response, body) => {
     console.error('Error occurred:', error);
   } else {
     if (response.statusCode === 200) {
-      const movieINFO = JSON.parse(body).results;
-      const AntillesFilms = movieINFO.filter(film => film.characters.includes(AntillesID));
+      const movies = JSON.parse(body).results;
+      const AntillesFilms = movies.filter(movie => movie.characters.includes(AntillesID));
       console.log(`${AntillesFilms.length}`);
     } else {
       console.error('Error occurred:', error);
