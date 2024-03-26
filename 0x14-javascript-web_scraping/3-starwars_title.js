@@ -9,9 +9,9 @@ request.get(URL, (error, response, body) => {
   if (error) {
     console.error('Error occurred:', error);
   } else {
-    if (response.statusCode === 200){
+    if (response.statusCode === 200) {
       const movieINFO = JSON.parse(body);
-      console.log(`${movieINFO.title}`);	
+      console.log(`${movieINFO.title}`);
     } else {
       console.error('Error occurred:', error);
     }
