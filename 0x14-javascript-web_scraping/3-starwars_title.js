@@ -11,7 +11,7 @@ request.get(URL, (error, response, body) => {
   } else {
     if (response.statusCode === 200){
       const movieINFO = JSON.parse(body);
-      console.log(`Title: ${movieINFO.title}`);	
+      console.log(`${movieINFO.title}`);	
     } else {
       console.error('Error occurred:', error);
     }
